@@ -102,7 +102,7 @@ jobs:
 
       - name: Download YouTube iPA
         run: |
-          wget "$YOUTUBE_URL" --no-verbose -O main/YouTube.ipa && echo -e "==> \033[1mYouTube v${{ inputs.youtube_version }} downloaded! \033[0m"
+          wget "$YOUTUBE_URL" --no-verbose -O ${{ github.workspace }}/main/YouTube.ipa && echo -e "==> \033[1mYouTube v${{ inputs.youtube_version }} downloaded! \033[0m"
 
         env:
           THEOS: ${{ github.workspace }}/theos
